@@ -26,14 +26,3 @@ services:
       - "9004:9004"
     networks:
       - laravel
-
-  composer:
-    image: composer:latest
-    container_name: lara_composer
-    volumes:
-      - ./src:/var/www/html
-    working_dir: /var/www/html
-    depends_on:
-      - php
-    networks:
-      - laravel    
